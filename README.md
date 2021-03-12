@@ -1,22 +1,37 @@
-dotfiles.git
-============
-Clone and run this on a new EC2 instance running Ubuntu 12.04.2 LTS to
-configure your `bash` and `emacs` development environment as follows:
+dotfiles
+========
+Clone and run this on a new Linux machine to configure your `bash`/`zshrc` and several development app as follows:
 
-```sh
+```bash
 cd $HOME
-git clone https://github.com/startup-class/dotfiles.git
-ln -sb dotfiles/.screenrc .
-ln -sb dotfiles/.bash_profile .
-ln -sb dotfiles/.bashrc .
-ln -sb dotfiles/.bashrc_custom .
-mv .emacs.d .emacs.d~
-ln -s dotfiles/.emacs.d .
+git clone git@github.com:raulbocanegra/dotfiles.git
+ln -s dotfiles/.config/Code/User/settings.json .config/Code/User/settings.json
+ln -s dotfiles/.config/terminator/config .config/terminator/config
+ln -sb dotfiles/.zshrc .
+ln -sb dotfiles/.vimrc .
+ln -sb dotfiles/.pam_environment .
+cp dotfiles/aliases.zsh $ZSH/custom/
+touch .config/filezilla/sitemanager.xml
 ```
 
-See also http://github.com/startup-class/setup to install prerequisite
-programs. If all goes well, in addition to a more useful prompt, now you can
-do `emacs -nw hello.js` and hitting `C-c!` to launch an interactive SSJS
-REPL, among many other features. See the
-[Startup Engineering Video Lectures 4a/4b](https://class.coursera.org/startup-001/lecture/index)
-for more details.
+Install zsh and plugins
+=======================
+
+## zsh
+```sh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+## powerlevel10k
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+## Install Nerd fonts
+```bash
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20NF%20Italic.ttf
+mv MesloLGS* ~/.local/share/fonts/
+fc-cache -f -v
+```

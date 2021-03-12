@@ -1,0 +1,43 @@
+{
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.scrollback": 10000,
+    "editor.suggestSelection": "first",
+    "editor.rulers": [
+        120
+    ],
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,
+    },
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.trimTrailingWhitespace": true,
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "python.venvPath": "/home/rbocanegra/.virtualenvs/",
+    "python.terminal.activateEnvironment": true,
+    "python.autoComplete.addBrackets": false,
+    "python.autoComplete.extraPaths": [],
+    "python.formatting.autopep8Args": [
+        "--max-line-length",
+        "120"
+    ],
+    "python.linting.pylintArgs": [
+        "-j",
+        "1"
+    ],
+    "python.languageServer": "Pylance",
+    "python.analysis.extraPaths": [],
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.diagnosticMode": "workspace",
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "-j",
+        "3",
+        "--max-line-length",
+        "120",
+        "--exclude",
+        "etl/etl/models.py"
+    ],
+    "json.maxItemsComputed": 25000,
+    "window.zoomLevel": 1,
+}
