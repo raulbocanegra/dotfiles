@@ -1,18 +1,4 @@
-dotfiles
-========
-Clone and run this on a new Linux machine to configure your `bash`/`zshrc` and several development app as follows:
-
-```bash
-cd $HOME
-git clone git@github.com:raulbocanegra/dotfiles.git
-ln -s dotfiles/.config/Code/User/settings.json .config/Code/User/settings.json
-ln -s dotfiles/.config/terminator/config .config/terminator/config
-ln -sb dotfiles/.zshrc .
-ln -sb dotfiles/.vimrc .
-ln -sb dotfiles/.pam_environment .
-cp dotfiles/aliases.zsh $ZSH/custom/
-touch .config/filezilla/sitemanager.xml
-```
+Clone and run these scripts on a new Linux machine to configure your `bash`/`zshrc` and several development app as follows.
 
 Install zsh and plugins
 =======================
@@ -34,4 +20,19 @@ wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20I
 wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20NF%20Italic.ttf
 mv MesloLGS* ~/.local/share/fonts/
 fc-cache -f -v
+```
+[Setup fonts](https://github.com/romkatv/powerlevel10k#manual-font-installation) in your terminal/apps
+
+dotfiles
+========
+```bash
+cd $HOME
+git clone git@github.com:raulbocanegra/dotfiles.git
+ln -s dotfiles/.config/Code/User/settings.json .config/Code/User/settings.json
+ln -s dotfiles/.config/terminator/config .config/terminator/config
+ln -sb dotfiles/.zshrc .
+ln -sb dotfiles/.vimrc .
+ln -sb dotfiles/.pam_environment .
+cp dotfiles/aliases.zsh $ZSH/custom/
+touch .config/filezilla/sitemanager.xml
 ```
