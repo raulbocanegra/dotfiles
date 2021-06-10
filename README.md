@@ -33,6 +33,7 @@ ln -s dotfiles/.config/terminator/config .config/terminator/config
 ln -sb dotfiles/.zshrc .
 ln -sb dotfiles/.vimrc .
 ln -sb dotfiles/.profile .
+ln -sb dotfiles/.p10k.zsh .
 cp dotfiles/aliases.zsh $ZSH/custom/
 touch .config/filezilla/sitemanager.xml
 ```
