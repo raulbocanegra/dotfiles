@@ -32,7 +32,7 @@ ln -s dotfiles/.config/Code/User/settings.json .config/Code/User/settings.json
 ln -s dotfiles/.config/terminator/config .config/terminator/config
 ln -sb dotfiles/.zshrc .
 ln -sb dotfiles/.vimrc .
-ln -sb dotfiles/.pam_environment .
+ln -sb dotfiles/.profile .
 cp dotfiles/aliases.zsh $ZSH/custom/
 touch .config/filezilla/sitemanager.xml
 ```
